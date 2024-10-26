@@ -1,0 +1,107 @@
+//Core
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       String    @id @default(uuid())
+  username String    @unique
+  password String
+  sessions Session[]
+}
+
+model Session {
+  id        String   @id
+  userId    String
+  expiresAt DateTime
+  user      User     @relation(references: [id], fields: [userId], onDelete: Cascade)
+}
+
+model Parametre {
+  key   String  @id @unique
+  label String
+  order Int
+  value String?
+}
+
+//BO (Actualite)
+model Actualite {
+  id                        String   @id @default(uuid())
+  titre                     String
+  pictureAssetId_Principale String
+  fileAssetId_Externe       String
+  videoAssetId_Slide        String
+  redacteur                 String
+  tempsLecture              String
+  descriptionCourte         String
+  contenu                   String
+  createdAt                 DateTime @default(now())
+}
+
+//BO (Formulaires)
+model Contact {
+  id        String   @id @default(uuid())
+  email     String
+  nom       String
+  prenom    String
+  telephone String
+  message   String
+  createdAt DateTime @default(now())
+}
+
+//BO (Galerie)
+model Asset {
+  id               String         @id @default(uuid())
+  path             String
+  filename         String
+  extension        String
+  originalFilename String
+  createdAt        DateTime       @default(now())
+  assetCategoryId  String
+  assetCategory    AssetCategory  @relation(fields: [assetCategoryId], references: [id], onDelete: Cascade)
+  //Relations
+  pictureAssets    PictureAsset[]
+  videoAssets      VideoAsset[]
+  fileAssets       FileAsset[]
+}
+
+model AssetCategory {
+  id     String  @id @default(uuid())
+  name   String  @unique
+  assets Asset[]
+}
+
+model PictureAsset {
+  id         String   @id @default(uuid())
+  createdAt  DateTime @default(now())
+  path       String
+  quality    Int
+  resolution Int?
+  assetId    String
+  asset      Asset    @relation(fields: [assetId], references: [id], onDelete: Cascade)
+}
+
+model VideoAsset {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  path      String
+  assetId   String
+  controls  Boolean
+  loop      Boolean
+  autoplay  Boolean
+  asset     Asset    @relation(fields: [assetId], references: [id], onDelete: Cascade)
+}
+
+model FileAsset {
+  id        String   @id @default(uuid())
+  path      String
+  createdAt DateTime @default(now())
+  assetId   String
+  name      String
+  asset     Asset    @relation(fields: [assetId], references: [id], onDelete: Cascade)
+}

@@ -1,0 +1,72 @@
+[
+	{
+		"key": "PUBLIC_RECAPCHA_SITEKEY",
+		"label": "Clé ReCapcha publique",
+		"default_value": "",
+		"env_key": "PUBLIC_RECAPCHA_SITEKEY",
+		"order": 1
+	},
+	{
+		"key": "SECRET_RECAPCHA_SITEKEY",
+		"label": "Clé ReCapcha privée",
+		"default_value": "",
+		"env_key": "SECRET_RECAPCHA_KEY",
+		"order": 2
+	},
+	{
+		"key": "PUBLIC_HEAD_TAG_MANAGER",
+		"label": "Script head du tag manager",
+		"default_value": "",
+		"env_key": "PUBLIC_HEAD_TAG_MANAGER",
+		"order": 3
+	},
+	{
+		"key": "PUBLIC_BODY_TAG_MANAGER",
+		"label": "Script body du tag manager",
+		"default_value": "",
+		"env_key": "PUBLIC_BODY_TAG_MANAGER",
+		"order": 4
+	},
+	{
+		"key": "PUBLIC_SMTP_HOST",
+		"label": "Hostname du serveur SMTP",
+		"default_value": "smtp-relay.brevo.com",
+		"env_key": "PUBLIC_SMTP_HOST",
+		"order": 5
+	},
+	{
+		"key": "PUBLIC_SMTP_PORT",
+		"label": "Port du serveur SMTP",
+		"default_value": "",
+		"env_key": "PUBLIC_SMTP_PORT",
+		"order": 6
+	},
+	{
+		"key": "PUBLIC_SMTP_IDENTIFIANT",
+		"label": "Identifiant du serveur SMTP",
+		"default_value": "",
+		"env_key": "PUBLIC_SMTP_IDENTIFIANT",
+		"order": 7
+	},
+	{
+		"key": "SECRET_SMTP_PASSWORD",
+		"label": "Mot de passe du serveur SMTP",
+		"default_value": "",
+		"env_key": "SECRET_SMTP_PASSWORD",
+		"order": 8
+	},
+	{
+		"key": "PUBLIC_SMTP_SENDER",
+		"label": "E-Mail expéditeur (Email visible par le client lors de la réception)",
+		"default_value": "",
+		"env_key": "PUBLIC_SMTP_SENDER",
+		"order": 9
+	},
+	{
+		"key": "PUBLIC_SMTP_SENDER_NAME",
+		"label": "Nom de l'expéditeur (Nom visible par le client lors de la réception)",
+		"default_value": "",
+		"env_key": "PUBLIC_SMTP_SENDER_NAME",
+		"order": 10
+	}
+]

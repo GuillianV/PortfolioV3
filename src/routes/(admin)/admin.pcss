@@ -1,0 +1,136 @@
+@import '/static/styles/editorjs.scss';
+@import '/static/main.scss';
+
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@media only screen and (min-width: 1536px) {
+	html {
+		font-size: 18px;
+	}
+}
+
+@media only screen and (max-width: 1280px) {
+	html {
+		font-size: 16px;
+	}
+}
+@media only screen and (max-width: 1024px) {
+	html {
+		font-size: 14px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	html {
+		font-size: 12px;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	html {
+		font-size: 10px;
+	}
+}
+
+@layer components {
+	.appbar {
+		@apply sticky top-4 z-20 w-full bg-surface-50 p-4 rounded-container-token dark:bg-surface-800;
+	}
+
+	.appcontent {
+		@apply mt-4 h-full;
+	}
+
+	.li a {
+		@apply decoration-secondary-500 underline-offset-4;
+	}
+	.li a.active {
+		@apply underline;
+	}
+
+	.ul-parent ul {
+		@apply ml-4;
+	}
+
+	.input {
+		@apply p-4 sm:p-2;
+	}
+
+	.back-a {
+		@apply variant-ghost-secondary btn mr-4 p-1 pl-4 pr-4  rounded-container-token;
+	}
+
+	.btn-menu {
+		@apply variant-ghost-tertiary btn mr-4 p-1 pl-4 pr-4 rounded-container-token lg:hidden;
+	}
+
+	.back-icon {
+		@apply text-secondary-500;
+	}
+
+	[data-button='create'] {
+		@apply variant-filled-primary btn  mr-3 p-1 pl-4 pr-4 rounded-container-token;
+	}
+
+	[data-button-icon='create'] {
+		@apply !ml-0 p-1 text-tertiary-500 sm:!ml-1;
+	}
+
+	[data-button='delete'] {
+		@apply !variant-filled-error btn mr-3  bg-error-400 p-1 pl-4 pr-4 rounded-container-token;
+	}
+
+	[data-button-icon='delete'] {
+		@apply p-1 text-tertiary-500;
+	}
+
+	[data-button='disconect'] {
+		@apply variant-ghost-secondary btn bg-surface-50 p-1 pl-4 pr-4 ring-tertiary-400 rounded-container-token;
+	}
+
+	[data-button-icon='disconect'] {
+		@apply p-1 text-tertiary-900 dark:text-white;
+	}
+
+	[data-button='quit'] {
+		@apply !variant-filled-error btn  bg-error-400 p-1 rounded-container-token;
+	}
+
+	[data-button-icon='quit'] {
+		@apply rotate-45 p-1 text-tertiary-500;
+	}
+
+	[data-button='refresh'] {
+		@apply !variant-ghost-secondary btn  bg-error-400 p-1 rounded-container-token;
+	}
+
+	[data-button-icon='refresh'] {
+		@apply rotate-45 p-1 text-secondary-500;
+	}
+
+	[data-button='save'] {
+		@apply !variant-filled-primary btn  mr-3  p-1 pl-4 pr-4 rounded-container-token;
+	}
+
+	[data-button-icon='save'] {
+		@apply p-1 dark:text-tertiary-900;
+	}
+
+	[data-button='select'] {
+		@apply !variant-filled-primary btn  mr-3  p-1 pl-4 pr-4 rounded-container-token;
+	}
+
+	[data-button-icon='select'] {
+		@apply p-1 dark:text-tertiary-900;
+	}
+
+	[data-button='website'] {
+		@apply variant-ghost-secondary btn bg-surface-50 p-1 pl-4 pr-4 ring-tertiary-400 rounded-container-token;
+	}
+
+	[data-button-icon='website'] {
+		@apply !m-0 p-1 text-tertiary-900 dark:text-white sm:!m-1;
+	}
+}

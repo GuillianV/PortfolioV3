@@ -1,0 +1,37 @@
+{
+	"admin": {
+		"slug": "/admin"
+	},
+	"sidebar": [
+		{
+			"bartitle": "Accueil",
+			"slug": "/home",
+			"linkactive": "home",
+			"items": []
+		},
+		{
+			"bartitle": "Actualités",
+			"slug": "/actualites",
+			"linkactive": "actualites",
+			"items": []
+		},
+		{
+			"bartitle": "Formulaires",
+			"linkactive": "formulaires",
+			"items": [
+				{
+					"bartitle": "Contacts",
+					"slug": "/contacts",
+					"linkactive": "contacts",
+					"items": []
+				}
+			]
+		},
+		{
+			"bartitle": "Paramètres",
+			"slug": "/parametres",
+			"linkactive": "parametres",
+			"items": []
+		}
+	]
+}
