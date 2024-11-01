@@ -6,5 +6,5 @@
 	const { PUBLIC_RECAPCHA_SITEKEY } = parametres;
 </script>
 
-<h1 class="font-extrabold">Home</h1>
+<h1 class="text-5xl">Home</h1>
 <Contact {PUBLIC_RECAPCHA_SITEKEY} />

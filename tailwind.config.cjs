@@ -3,6 +3,7 @@ import { skeleton } from '@skeletonlabs/tw-plugin';
 import scrollbar from 'tailwind-scrollbar';
 import { backoffice } from './themes/back/custom';
 import { limeTheme } from './themes/back/lime';
+import { frontTheme } from './themes/back/front';
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -15,7 +16,13 @@ module.exports = {
 	],
 
 	theme: {
-		extend: {}
+		fontFamily: {
+			'primary': ['BohrDonni'],
+			'secondary-md': ['Poppins-Medium'],
+			'secondary-sm': ['Poppins-Light'],
+		},
+		extend: {
+		}
 	},
 
 	plugins: [
@@ -25,7 +32,8 @@ module.exports = {
 			themes: {
 				custom: [
 					// backoffice
-					limeTheme
+					limeTheme,
+					frontTheme
 				]
 			}
 		})

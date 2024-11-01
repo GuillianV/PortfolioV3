@@ -1,10 +1,49 @@
 /* Write your global styles here, in PostCSS syntax */
 
-@import '/static/main.scss';
+@import "/static/main.scss";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: "BohrDonni";
+    font-weight: 500;
+    src: url("/fonts/BohrDonni.ttf");
+  }
+
+  @font-face {
+    font-family: "Poppins-Medium";
+    font-weight: 500;
+    src: url("/fonts/Poppins-Medium.ttf");
+  }
+
+  @font-face {
+    font-family: "Poppins-Light";
+    font-weight: 300;
+    src: url("/fonts/Poppins-Medium.ttf");
+  }
+}
+
 @layer components {
+  
+  h1,
+  h2,
+
+  .btn {
+    @apply font-primary;
+  }
+
+  h3,
+  input,
+  label {
+    @apply font-secondary-md;
+  }
+
+  div,
+  span,
+  p {
+    @apply font-secondary-sm;
+  }
 }

@@ -11,7 +11,7 @@
 		{@html PUBLIC_HEAD_TAG_MANAGER.value}
 	{/if}
 </svelte:head>
-<body data-sveltekit-preload-data="hover">
+<body data-sveltekit-preload-data="hover" data-theme="front">
 	{#if PUBLIC_BODY_TAG_MANAGER && PUBLIC_BODY_TAG_MANAGER.value != null && PUBLIC_BODY_TAG_MANAGER.value.length > 0}
 		{@html PUBLIC_BODY_TAG_MANAGER.value}
 	{/if}
