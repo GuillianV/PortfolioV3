@@ -32,6 +32,12 @@ importers:
       dotenv:
         specifier: ^16.4.5
         version: 16.4.5
+      gsap:
+        specifier: ./gsap-bonus.tgz
+        version: file:gsap-bonus.tgz
+      lil-gui:
+        specifier: ^0.20.0
+        version: 0.20.0
       lucia:
         specifier: ^3.2.2
         version: 3.2.2
@@ -47,9 +53,15 @@ importers:
       sharp:
         specifier: ^0.32.6
         version: 0.32.6
+      stats.js:
+        specifier: ^0.17.0
+        version: 0.17.0
       svelte-preprocess:
         specifier: ^5.1.4
         version: 5.1.4(postcss-load-config@4.0.2(postcss@8.4.47))(postcss@8.4.47)(sass@1.80.4)(svelte@4.2.19)(typescript@5.6.3)
+      three:
+        specifier: ^0.170.0
+        version: 0.170.0
       uuid:
         specifier: ^9.0.1
         version: 9.0.1
@@ -1734,6 +1746,10 @@ packages:
   graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
 
+  gsap@file:gsap-bonus.tgz:
+    resolution: {integrity: sha512-F/gcKtbqBb6ozpphFq8GLhZeB5KtterViGvNUJFgXCjvFaGvF47ySaWP+zW/D0af2OMjKxmdgzUyby/LsplDIA==, tarball: file:gsap-bonus.tgz}
+    version: 3.12.2
+
   gtoken@7.1.0:
     resolution: {integrity: sha512-pCcEwRi+TKpMlxAQObHDQ56KawURgyAf6jtIY046fJ5tIv3zDe/LEIubckAO8fj6JnAxLdmWkUfNyulQ2iKdEw==}
     engines: {node: '>=14.0.0'}
@@ -1904,6 +1920,9 @@ packages:
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
+
+  lil-gui@0.20.0:
+    resolution: {integrity: sha512-k7Ipr0ztqslMA2XvM5z5ZaWhxQtnEOwJBfI/hmSuRh6q4iMG9L0boqqrnZSzBR1jzyJ28OMl47l65ILzRe1TdA==}
 
   lilconfig@2.1.0:
     resolution: {integrity: sha512-utWOt/GHzuUxnLKxB6dk81RoOeoNeHgbrXiuGk4yyF5qlRz+iIVWu56E2fqGHFrXz0QNUhLB/8nKqvRH66JKGQ==}
@@ -2593,6 +2612,9 @@ packages:
   stackback@0.0.2:
     resolution: {integrity: sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==}
 
+  stats.js@0.17.0:
+    resolution: {integrity: sha512-hNKz8phvYLPEcRkeG1rsGmV5ChMjKDAWU7/OJJdDErPBNChQXxCo3WZurGpnWc6gZhAzEPFad1aVgyOANH1sMw==}
+
   statuses@2.0.1:
     resolution: {integrity: sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==}
     engines: {node: '>= 0.8'}
@@ -2764,6 +2786,9 @@ packages:
 
   thread-stream@2.7.0:
     resolution: {integrity: sha512-qQiRWsU/wvNolI6tbbCKd9iKaTnCXsTwVxhhKM6nctPdujTyztjlbUkUTUymidWcMnZ5pWR0ej4a0tjsW021vw==}
+
+  three@0.170.0:
+    resolution: {integrity: sha512-FQK+LEpYc0fBD+J8g6oSEyyNzjp+Q7Ks1C568WWaoMRLW+TkNNWmenWeGgJjV105Gd+p/2ql1ZcjYvNiPZBhuQ==}
 
   tiny-glob@0.2.9:
     resolution: {integrity: sha512-g/55ssRPUjShh+xkfx9UPDXqhckHEsHr4Vd9zX55oSdGZc/MD0m3sferOkwWtp98bv+kcVfEHtRJgBVJzelrzg==}
@@ -4560,6 +4585,8 @@ snapshots:
 
   graphemer@1.4.0: {}
 
+  gsap@file:gsap-bonus.tgz: {}
+
   gtoken@7.1.0:
     dependencies:
       gaxios: 6.7.1
@@ -4725,6 +4752,8 @@ snapshots:
     dependencies:
       prelude-ls: 1.2.1
       type-check: 0.4.0
+
+  lil-gui@0.20.0: {}
 
   lilconfig@2.1.0: {}
 
@@ -5374,6 +5403,8 @@ snapshots:
 
   stackback@0.0.2: {}
 
+  stats.js@0.17.0: {}
+
   statuses@2.0.1: {}
 
   std-env@3.7.0: {}
@@ -5597,6 +5628,8 @@ snapshots:
   thread-stream@2.7.0:
     dependencies:
       real-require: 0.2.0
+
+  three@0.170.0: {}
 
   tiny-glob@0.2.9:
     dependencies:

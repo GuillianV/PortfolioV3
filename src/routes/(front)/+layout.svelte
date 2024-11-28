@@ -1,5 +1,6 @@
 <script>
-	import './app.pcss';
+	import Header from "$lib/components/Header.svelte";
+	import "./app.pcss";
 
 	export let data;
 	const { parametres } = data;
@@ -12,6 +13,8 @@
 	{/if}
 </svelte:head>
 <body data-sveltekit-preload-data="hover" data-theme="front">
+	<Header />
+
 	{#if PUBLIC_BODY_TAG_MANAGER && PUBLIC_BODY_TAG_MANAGER.value != null && PUBLIC_BODY_TAG_MANAGER.value.length > 0}
 		{@html PUBLIC_BODY_TAG_MANAGER.value}
 	{/if}
