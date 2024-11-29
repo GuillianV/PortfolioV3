@@ -11,17 +11,9 @@ export default class Camera {
 		this.canvas = this.experience.canvas;
 		this.mouse = this.experience.mouse
 		this.gui = this.experience.debug.gui.addFolder('Camera');
+		
 		this.setInstance();
-		this.setOptions();
-		this.setControls();
-
-
-		this.mouse.on('mousemove', (e)=>{
-			this.instance.position.x = e.x;
-			this.instance.position.y = -e.y;
-			this.instance.lookAt(this.scene.position);
-		})
-
+		this.reset()
 	}
 
 	setInstance() {
@@ -33,6 +25,11 @@ export default class Camera {
 	setOptions() {
 	}
 	setControls() {
+		
+		if(this.controls != null){
+			this.controls.dispose()
+		}
+
 		this.controls = new OrbitControls(this.instance, this.canvas);
 		this.controls.enableDamping = true;
 		this.controls.enablePan = false;
@@ -63,5 +60,21 @@ export default class Camera {
 		});
 
 		this.controls.autoRotate = false;
+	}
+
+
+	reset(){
+
+		this.mouse.off("mousemove")
+
+		this.setControls();
+
+		this.mouse.on('mousemove', (e)=>{
+			this.instance.position.x = e.x;
+			this.instance.position.y = -e.y;
+			this.instance.lookAt(this.scene.position);
+		})
+
+
 	}
 }

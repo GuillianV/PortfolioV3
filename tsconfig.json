@@ -1,8 +1,8 @@
 {
 	"extends": "./.svelte-kit/tsconfig.json",
 	"compilerOptions": {
-		"allowJs": true,
-		"checkJs": true,
+		"allowJs": false,
+		"checkJs": false,
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 		"resolveJsonModule": true,
@@ -13,6 +13,6 @@
 		
 	},
 	"exclude": [
-		"src/lib/client/three/**"
+		"src/lib/client/three/**.js"
 	]
 }

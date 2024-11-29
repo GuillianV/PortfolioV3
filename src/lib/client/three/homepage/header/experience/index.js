@@ -19,10 +19,10 @@ export default class Experience {
 		}
 		instance = this;
 
-
+        
 		
         this.canvas = canvas
-        this.debug = new Debug(true)
+        this.debug = new Debug(window.location.hash == '#debug')
         this.sizes = new Sizes()
         this.time = new Time()
         this.scene = new THREE.Scene()

@@ -1,4 +1,4 @@
-<header class="header w-full z-10 bg-white text-white flex justify-center items-center">
+<header class="header w-full z-10 relative bg-white text-white flex justify-center items-center">
 
     <div class="bg-surface-500 fixed top-0 rounded-[32px] m-4 flex flex-row flex-nowrap justify-between items-center">
    

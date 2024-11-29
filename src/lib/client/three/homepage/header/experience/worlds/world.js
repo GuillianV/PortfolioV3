@@ -16,8 +16,13 @@ export default class World
         this.resources.on('ready', () =>
         {
              // Setup
+             
             this.environment = new Environment()
-            this.particles = new Particle({x:0,y:0,z:20})
+            this.particles = new Particle({
+                position :{x:0,y:0,z:20},
+                imageJsonPath:'/json/header-bg.json',
+                imageSize:201
+            })
             
         })
        
