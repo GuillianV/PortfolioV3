@@ -19,7 +19,7 @@ export default class World
              
             this.environment = new Environment()
             this.particles = new Particle({
-                position :{x:0,y:0,z:20},
+                position :{x:0,y:0,z:25},
                 imageJsonPath:'/json/header-bg.json',
                 imageSize:201
             })

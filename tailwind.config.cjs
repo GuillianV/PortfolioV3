@@ -20,6 +20,7 @@ module.exports = {
 			'primary': ['BohrDonni'],
 			'secondary-md': ['Poppins-Medium'],
 			'secondary-sm': ['Poppins-Light'],
+			'secondary-xs': ['Poppins-Thin'],
 		},
 		extend: {
 		}
